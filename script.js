@@ -21,13 +21,11 @@ document.querySelectorAll('.bar-wrapper').forEach(wrapper => {
   });
 
   wrapper.addEventListener('drag', (e) => {
-    console.log("draging");
     let bar = e.target.className === "bar" ? e.target : e.target.querySelector(".bar");
     updateBar(bar, e.clientX);
   });
 
   wrapper.addEventListener('click', (e) => {
-    console.log("click");
     let bar = e.target.className === "bar" ? e.target : e.target.querySelector(".bar");
     updateBar(bar, e.clientX);
   });

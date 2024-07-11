@@ -36,13 +36,15 @@
   margin-left: 5px;
 }
 
-.divisions {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 5px; /* Adjust margin as needed */
+.section {
+  padding-top: 30px;
+  padding-bottom: 0px;
 }
 
-.division {
-  font-size: 12px; /* Adjust font size as needed */
-  color: #888; /* Adjust color as needed */
+.select {
+  min-width: 25%;
+}
+
+.select #state {
+  min-width: 100%;
 }

@@ -3,63 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive Horizontal Bar Graph</title>
+  <title>MBarros</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   <link rel="stylesheet" href="styles.css">
-  <script type="text/javascript" src="city_state.js"></script>
+  <!--<script type="text/javascript" src="city_state.js"></script>-->
+  <script type= "text/javascript" src = "countries.js"></script>
 </head>
 <body>
-<div id="widget">
-<form>
-Region&raquo; <select onchange="set_country(this,country,city_state)" size="1" name="region">
-<option value="" selected="selected">SELECT REGION</option>
-<option value=""></option>
-<script type="text/javascript">
-setRegions(this);
-</script>
-</select>
-Country&raquo; <select name="country" size="1" disabled="disabled" onchange="set_city_state(this,city_state)"></select>
-City/State&raquo; <select name="city_state" size="1" disabled="disabled" onchange="print_city_state(country,this)"></select>
-</form>
-<div id="txtregion"></div>
-<div id="txtplacename"></div>
-</div>
+  <section class="section">
+    <div class="container">
+      <input class="input" placeholder="email">
+      <h1 class="h1">De onde você é?</h1>
+      <h2 class="h2">País</h2>
+      <div class="select">
+        <select onchange="print_state('state',this.selectedIndex);" id="country" name ="country"></select>
+      </div>
+      <h2 class="h2">Estado</h2>
+      <div class="select">
+        <select name ="state" id="state"></select>
+      </div>
+    </div>
+  </section>
 
   <section class="section">
     <div class="container">
-      <h1 class="title">Como você está se sentindo?</h1>
+      <h1 class="h1">Como você está se sentindo?</h1>
       <div id="barGraph" class="bar-container">
         Alegria
         <div class="bar-wrapper" draggable="true">
           &#128512;
           <div class="bar" data-value="0"><span>0</span></div>
         </div>
-        Tristeza
+        Esperança
         <div class="bar-wrapper" draggable="true">
           &#128542;
           <div class="bar" data-value="0"><span>0</span></div>
         </div>
-        Raiva
+        Saudade
         <div class="bar-wrapper" draggable="true">
           &#128545;
-          <div class="bar" data-value="0"><span>0</span></div>
-        </div>
-        Nojinho
-        <div class="bar-wrapper" draggable="true">
-          &#128541;
-          <div class="bar" data-value="0"><span>0</span></div>
-        </div>
-        <div>
-          Medo
-        </div>
-        <div class="bar-wrapper" draggable="true">
-          &#128552;
           <div class="bar" data-value="0"><span>0</span></div>
         </div>
       </div>
     </div>
   </section>
 
+  <section class="section">
+    <button class="button" id="submit">Enviar</button>
+  </section>
+
+  <script language="javascript">print_country("country");</script>
   <script src="script.js"></script>
 </body>
 </html>

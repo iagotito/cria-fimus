@@ -1,0 +1,55 @@
+<template id="loggedView">
+  <section class="section" id="user-info">
+    <div>
+      <h1 class="h1">
+        Email
+      </h1>
+      <input class="input" id="email">
+    </div>
+
+    <div>
+      <h1 class="h1">
+        De onde você é?
+      </h1>
+      <div class="select">
+        <select id="country" name="country"></select>
+      </div>
+      <div class="select">
+        <select name ="state" id ="state"></select>
+      </div>
+    </div>
+
+  </section>
+  <section class="section">
+    <div class="container">
+      <h1 class="h1">Como você está se sentindo?</h1>
+      <div id="barGraph" class="bar-container">
+        Alegria
+        <div class="bar-wrapper" draggable="true">
+          &#128512;
+          <div class="bar" id="joy" value="0"><span>0</span></div>
+        </div>
+        Esperança
+        <div class="bar-wrapper" draggable="true">
+          &#128526;
+          <div class="bar" id="hope" value="0"><span>0</span></div>
+        </div>
+        Saudade
+        <div class="bar-wrapper" draggable="true">
+          &#128557;
+          <div class="bar" id="longing" value="0"><span>0</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div id="content"></div>
+  </section>
+
+  <section class="section">
+    <button class="button" id="submit">Enviar</button>
+    <br>
+    <button class="button" id="logout">Logout</button>
+  </section>
+</template>

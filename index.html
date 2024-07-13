@@ -1,58 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MBarros</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-  <link rel="stylesheet" href="styles.css">
-  <!--<script type="text/javascript" src="city_state.js"></script>-->
-  <script type= "text/javascript" src = "countries.js"></script>
+  <title>Sheets API Quickstart</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="./styles.css">
 </head>
-<body>
-  <section class="section">
-    <div class="container">
-      <input class="input" placeholder="email">
-      <h1 class="h1">De onde você é?</h1>
-      <h2 class="h2">País</h2>
-      <div class="select">
-        <select onchange="print_state('state',this.selectedIndex);" id="country" name ="country"></select>
+<body class="has-navbar-fixed-top">
+  <section class="section" id="navbar-section">
+    <nav class="navbar is-link is-fixed-top is-justify-content-center" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item logo is-size-3" href="/">
+          Sentimentos
+        </a>
       </div>
-      <h2 class="h2">Estado</h2>
-      <div class="select">
-        <select name ="state" id="state"></select>
-      </div>
-    </div>
+    </nav>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <h1 class="h1">Como você está se sentindo?</h1>
-      <div id="barGraph" class="bar-container">
-        Alegria
-        <div class="bar-wrapper" draggable="true">
-          &#128512;
-          <div class="bar" data-value="0"><span>0</span></div>
-        </div>
-        Esperança
-        <div class="bar-wrapper" draggable="true">
-          &#128542;
-          <div class="bar" data-value="0"><span>0</span></div>
-        </div>
-        Saudade
-        <div class="bar-wrapper" draggable="true">
-          &#128545;
-          <div class="bar" data-value="0"><span>0</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <section id="main"/>
 
-  <section class="section">
-    <button class="button" id="submit">Enviar</button>
-  </section>
-
-  <script language="javascript">print_country("country");</script>
-  <script src="script.js"></script>
-</body>
+  <script type="module" src="scripts/main.js"></script>
+  </body>
 </html>

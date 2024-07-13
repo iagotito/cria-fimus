@@ -37,8 +37,12 @@
 }
 
 .section {
-  padding-top: 30px;
   padding-bottom: 0px;
+  padding-top: 10px;
+}
+
+#navbar-section {
+  padding-bottom: 20px;
 }
 
 .select {

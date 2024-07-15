@@ -16,11 +16,19 @@ export function loadView() {
   if (gapiInited && gisInited) {
     const token = gapi.client.getToken();
     if (token) {
-      loadLoggedView();
+      loadHomeView();
     } else {
       loadNotLoggedView();
     }
   }
+}
+
+async function loadHomeView(){
+  const template = await fetchTemplate("templates/homeView.html");
+  main.innerHTML = template.innerHTML;
+
+  let test = document.getElementById("test");
+  test.addEventListener("click", loadAppView);
 }
 
 async function loadNotLoggedView() {
@@ -31,8 +39,8 @@ async function loadNotLoggedView() {
   signin.addEventListener("click", handleAuthClick);
 }
 
-async function loadLoggedView() {
-  const template = await fetchTemplate("templates/loggedView.html");
+async function loadAppView() {
+  const template = await fetchTemplate("templates/appView.html");
   main.innerHTML = template.innerHTML;
 
   let logoutButton = document.getElementById("logout");
